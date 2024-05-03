@@ -1,21 +1,9 @@
-name: PinkpixelUtility
+name: FunCommands
 author: ClassyCoder
-main: com.pinkpixel.utility.PinkpixelUtility
-version: 1.0-SNAPSHOT
+main: me.classy.funcommands.FunCommands
+version: 1.0
 api-version: 1.8.8
 commands:
-  mute:
-    description: Mute a player
-  kick:
-    description: Kick a player
-  tempban:
-    description: Temporarily ban a player
-  ban:
-    description: Permanently ban a player
-  unmute:
-    description: Unmute a player
-  unban:
-    description: Unban a player
   kaboom:
     description: Kaboom a player
   boop:
@@ -44,14 +32,8 @@ commands:
   store:
   garlicbread:
   ping:
-  pinkpixelreload:
   hack:
   meow:
   announce:
-  help:
-  vanish:
-  unvanish:
   takechallenge:
-  sc:
-  setrank:
   iamveryhappy:

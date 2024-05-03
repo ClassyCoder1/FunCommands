@@ -29,6 +29,6 @@ public class ForumCommand implements CommandExecutor {
     }
 
     public void executeForumCommand(Player player) {
-        player.sendMessage(ChatColor.YELLOW + "Visit our forum at: " + ChatColor.AQUA + "");
+        player.sendMessage(ChatColor.YELLOW + "Visit our forum at: " + ChatColor.AQUA + "https://hypixel.net" + ChatColor.YELLOW + "!");
     }
 }
