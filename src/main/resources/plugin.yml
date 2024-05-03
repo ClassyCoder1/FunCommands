@@ -1,8 +1,8 @@
 name: FunCommands
 author: ClassyCoder
 main: me.classy.funcommands.FunCommands
-version: 1.0
-api-version: 1.8.8
+version: 1.1
+api-version: 1.12.2
 commands:
   kaboom:
     description: Kaboom a player
@@ -37,3 +37,5 @@ commands:
   announce:
   takechallenge:
   iamveryhappy:
+  vanish:
+  unvanish:

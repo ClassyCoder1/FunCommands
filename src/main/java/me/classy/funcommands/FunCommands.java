@@ -5,7 +5,39 @@ import org.bukkit.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 
-import me.classy.funcommands.commands.*;
+import me.classy.funcommands.commands.AdminCommand;
+import me.classy.funcommands.commands.AnnouncementCommand;
+import me.classy.funcommands.commands.BoopCommand;
+import me.classy.funcommands.commands.ChallengeCommand;
+import me.classy.funcommands.commands.DiscordCommand;
+import me.classy.funcommands.commands.DupeCommand;
+import me.classy.funcommands.commands.FireworkCommand;
+import me.classy.funcommands.commands.FloorIsLavaCommand;
+import me.classy.funcommands.commands.ForumCommand;
+import me.classy.funcommands.commands.FlyCommand;
+import me.classy.funcommands.commands.Gamemode;
+import me.classy.funcommands.commands.GarlicBreadCommand;
+import me.classy.funcommands.commands.HackCommand;
+import me.classy.funcommands.commands.HappyCommand;
+import me.classy.funcommands.commands.HelloCommand;
+import me.classy.funcommands.commands.KaboomCommand;
+import me.classy.funcommands.commands.MysteryCommand;
+import me.classy.funcommands.commands.OpMeCommand;
+import me.classy.funcommands.commands.PingCommand;
+import me.classy.funcommands.commands.PokemonCommand;
+import me.classy.funcommands.commands.PresentsCommand;
+import me.classy.funcommands.commands.RandomizeCapsCommand;
+import me.classy.funcommands.commands.RawrCommand;
+import me.classy.funcommands.commands.RemoveArenaBrawlCommand;
+import me.classy.funcommands.commands.SnowballCommand;
+import me.classy.funcommands.commands.StoreCommand;
+import me.classy.funcommands.commands.SpeedCommand;
+import me.classy.funcommands.commands.tpa;
+import me.classy.funcommands.commands.TrickOrTreatCommand;
+import me.classy.funcommands.commands.WhatDoYouDoCommand;
+import me.classy.funcommands.commands.WhatsMyFaceCommand;
+import me.classy.funcommands.commands.ZooCommand;
+import me.classy.funcommands.staffcommands.Vanish;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +45,12 @@ import java.util.List;
 public class FunCommands extends JavaPlugin {
 	
 	public void onEnable() {
+		
+		getLogger().info("Registering events...");
+		
+		Bukkit.getPluginManager().registerEvents(new Vanish(this), this);
+		
+		getLogger().info("Registered events!");
 		
 		getLogger().info("Registering commands...");
 		
@@ -44,7 +82,6 @@ public class FunCommands extends JavaPlugin {
 		this.getCommand("ping").setExecutor(new PingCommand(this));
 		this.getCommand("hack").setExecutor(new HackCommand(this));
 		this.getCommand("announce").setExecutor(new AnnouncementCommand(this));
-		this.getCommand("meow").setExecutor(new MeowCommand(this));
 		this.getCommand("takechallenge").setExecutor(new ChallengeCommand(this));
 		this.getCommand("iamveryhappy").setExecutor(new HappyCommand(this));
 		

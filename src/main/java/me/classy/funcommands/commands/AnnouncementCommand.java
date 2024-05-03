@@ -19,7 +19,7 @@ public class AnnouncementCommand implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		Player player = (Player) sender;
-		if (!(player.hasPermission("rank.admin"))) {
+		if (!(player.hasPermission("funcommands.announce"))) {
 			player.sendMessage("§cYou have to be an ADMIN to do this.");
 			return true;
 		}

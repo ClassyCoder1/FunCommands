@@ -29,7 +29,7 @@
       <dependency>
           <groupId>org.spigotmc</groupId>
           <artifactId>spigot-api</artifactId>
-          <version>1.8.8-R0.1-SNAPSHOT</version>
+          <version>1.12.2-R0.1-SNAPSHOT</version>
           <scope>provided</scope>
       </dependency>
 	   <dependency>
@@ -42,6 +42,11 @@
 		   <artifactId>annotations</artifactId>
 		   <version>13.0</version>
 		   <scope>compile</scope>
+	   </dependency>
+	   <dependency>
+		   <groupId>com.github.ConnorLinfoot</groupId>
+		   <artifactId>ActionBarAPI</artifactId>
+		   <version>5b2d642d3d</version>
 	   </dependency>
    </dependencies>
 

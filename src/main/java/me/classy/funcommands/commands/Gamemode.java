@@ -9,6 +9,8 @@ import org.bukkit.entity.Player;
 
 import me.classy.funcommands.FunCommands;
 
+import com.connorlinfoot.actionbarapi.ActionBarAPI;
+
 public class Gamemode implements CommandExecutor {
 	
 	private FunCommands plugin;
@@ -31,13 +33,15 @@ public class Gamemode implements CommandExecutor {
                         case "s":
                             player.setGameMode(GameMode.SURVIVAL);
                             player.sendMessage(ChatColor.GREEN + "Your gamemode has been changed to Survival.");
+							ActionBarAPI.sendActionBar(player, "§rYour current gamemode is §cSURVIVAL§r!");
                             break;
                         case "creative":
                         case "1":
                         case "c":
                             player.setGameMode(GameMode.CREATIVE);
                             player.sendMessage(ChatColor.GREEN + "Your gamemode has been changed to Creative.");
-                            break;
+                            ActionBarAPI.sendActionBar(player, "§rYour current gamemode is §cCREATIVE§r!");
+							break;
                         case "adventure":
                         case "2":
                         case "a":
@@ -49,6 +53,7 @@ public class Gamemode implements CommandExecutor {
                         case "sp":
                             player.setGameMode(GameMode.SPECTATOR);
                             player.sendMessage(ChatColor.GREEN + "Your gamemode has been changed to Spectator.");
+							ActionBarAPI.sendActionBar(player, "§rYour current gamemode is §cSPECTATOR§r!");
                             break;
                     }
                 } else {
