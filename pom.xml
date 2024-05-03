@@ -71,7 +71,7 @@
                        <manifest>
                            <addClasspath>true</addClasspath>
                            <classpathPrefix>lib/</classpathPrefix>
-                           <mainClass>com.pinkpixel.utility.PinkpixelUtility</mainClass>
+                           <mainClass>me.classy.funcommands.FunCommands</mainClass>
                        </manifest>
                    </archive>
                </configuration>
