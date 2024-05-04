@@ -3,6 +3,7 @@ author: ClassyCoder
 main: me.classy.funcommands.FunCommands
 version: 1.1
 api-version: 1.12.2
+depends: LuckPerms
 commands:
   kaboom:
     description: Kaboom a player
@@ -39,3 +40,5 @@ commands:
   iamveryhappy:
   vanish:
   unvanish:
+  sc:
+  setrank:

@@ -37,6 +37,12 @@ import me.classy.funcommands.commands.TrickOrTreatCommand;
 import me.classy.funcommands.commands.WhatDoYouDoCommand;
 import me.classy.funcommands.commands.WhatsMyFaceCommand;
 import me.classy.funcommands.commands.ZooCommand;
+import me.classy.funcommands.commands.SetRank;
+import me.classy.funcommands.rank.Rank;
+import me.classy.funcommands.rank.RankManager;
+import me.classy.funcommands.staff.StaffChat;
+import me.classy.funcommands.staff.StaffJoin;
+import me.classy.funcommands.staff.StaffLeave;
 import me.classy.funcommands.staffcommands.Vanish;
 
 import java.util.ArrayList;
@@ -48,7 +54,9 @@ public class FunCommands extends JavaPlugin {
 		
 		getLogger().info("Registering events...");
 		
-		Bukkit.getPluginManager().registerEvents(new Vanish(this), this);
+		getServer().getPluginManager().registerEvents(new Vanish(this), this);
+		getServer().getPluginManager().registerEvents(new StaffJoin(this), this);
+		getServer().getPluginManager().registerEvents(new StaffLeave(this), this);
 		
 		getLogger().info("Registered events!");
 		
@@ -84,6 +92,8 @@ public class FunCommands extends JavaPlugin {
 		this.getCommand("announce").setExecutor(new AnnouncementCommand(this));
 		this.getCommand("takechallenge").setExecutor(new ChallengeCommand(this));
 		this.getCommand("iamveryhappy").setExecutor(new HappyCommand(this));
+		this.getCommand("sc").setExecutor(new StaffChat(this));
+		this.getCommand("setrank").setExecutor(new SetRank(this));
 		
 		getLogger().info("Registered commands!");
 		
