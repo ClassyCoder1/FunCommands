@@ -1,7 +1,7 @@
 name: FunCommands
 author: ClassyCoder
 main: me.classy.funcommands.FunCommands
-version: 1.1
+version: 2.0
 api-version: 1.12.2
 depends: LuckPerms
 commands:
