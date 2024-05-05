@@ -55,48 +55,13 @@ public class FunCommands extends JavaPlugin {
 		
 		getLogger().info("Registering events...");
 		
-		getServer().getPluginManager().registerEvents(new Vanish(this), this);
-		getServer().getPluginManager().registerEvents(new StaffJoin(this), this);
-		getServer().getPluginManager().registerEvents(new StaffLeave(this), this);
+		initializeEvents();
 		
 		getLogger().info("Registered events!");
 		
 		getLogger().info("Registering commands...");
 		
-		this.getCommand("kaboom").setExecutor(new KaboomCommand(this));
-		this.getCommand("boop").setExecutor(new BoopCommand(this));
-		this.getCommand("gm").setExecutor(new Gamemode(this));
-		this.getCommand("fly").setExecutor(new FlyCommand(this));
-	    this.getCommand("iamtryingtobenicebutitshard").setExecutor(new RandomizeCapsCommand(this));
-		this.getCommand("fw").setExecutor(new FireworkCommand(this));
-		this.getCommand("zoo").setExecutor(new ZooCommand(this));
-		this.getCommand("trickortreat").setExecutor(new TrickOrTreatCommand(this));
-		this.getCommand("snowball").setExecutor(new SnowballCommand(this));
-		this.getCommand("presents").setExecutor(new PresentsCommand(this));
-		this.getCommand("whatsmyface").setExecutor(new WhatsMyFaceCommand(this));
-		this.getCommand("whatdoyoudo").setExecutor(new WhatDoYouDoCommand(this));
-		this.getCommand("floorislava").setExecutor(new FloorIsLavaCommand(this));
-		this.getCommand("opme").setExecutor(new OpMeCommand(this));
-		this.getCommand("rawr").setExecutor(new RawrCommand(this));
-		this.getCommand("tpa").setExecutor(new tpa(this));
-		this.getCommand("mystery").setExecutor(new MysteryCommand(this));
-		this.getCommand("removearenabrawl").setExecutor(new RemoveArenaBrawlCommand(this));
-		this.getCommand("pokemon").setExecutor(new PokemonCommand(this));
-		this.getCommand("hello").setExecutor(new HelloCommand(this));
-		this.getCommand("admin").setExecutor(new AdminCommand(this));
-		this.getCommand("forum").setExecutor(new ForumCommand(this));
-		this.getCommand("speed").setExecutor(new SpeedCommand(this));
-		this.getCommand("store").setExecutor(new StoreCommand(this));
-		this.getCommand("garlicbread").setExecutor(new GarlicBreadCommand(this));
-		this.getCommand("ping").setExecutor(new PingCommand(this));
-		this.getCommand("hack").setExecutor(new HackCommand(this));
-		this.getCommand("announce").setExecutor(new AnnouncementCommand(this));
-		this.getCommand("takechallenge").setExecutor(new ChallengeCommand(this));
-		this.getCommand("iamveryhappy").setExecutor(new HappyCommand(this));
-		this.getCommand("sc").setExecutor(new StaffChat(this));
-		this.getCommand("setrank").setExecutor(new SetRank(this));
-		this.getCommand("hi").setExecutor(new HelloCommand(this));
-		this.getCommand("thiscommandliterallydoesnothing").setExecutor(new ThisCommandLiterallyDoesNothing(this));
+		initializeCommands();
 		
 		getLogger().info("Registered commands!");
 		
@@ -106,16 +71,16 @@ public class FunCommands extends JavaPlugin {
 		
 		getLogger().info("Initizlized Gamerules!");
 		
-		getLogger().info(ChatColor.YELLOW + "-----------------------------------------");
-        getLogger().info(ChatColor.AQUA + "FunCommands plugin has been enabled!");
-        getLogger().info(ChatColor.YELLOW + "-----------------------------------------");
+		getLogger().info("§e------------------------------------");
+        getLogger().info("§bFunCommands plugin has been enabled!");
+        getLogger().info("§e------------------------------------");
 	}
 
 	@Override
 	public void onDisable() {
-		getLogger().info(ChatColor.YELLOW + "-----------------------------------------");
-        getLogger().info(ChatColor.AQUA + "PinkpixelUtility plugin has been disabled!");
-        getLogger().info(ChatColor.YELLOW + "-----------------------------------------");
+		getLogger().info("§e-------------------------------------");
+        getLogger().info("§bFunCommands plugin has been disabled!");
+        getLogger().info("§e-------------------------------------");
 	}
 	
 	public void initializeGameRules() {
@@ -134,5 +99,47 @@ public class FunCommands extends JavaPlugin {
             world.setGameRuleValue("fallDamage", "false");
         }
     }
+	
+	public void initializeEvents() {
+		getServer().getPluginManager().registerEvents(new Vanish(this), this);
+		getServer().getPluginManager().registerEvents(new StaffJoin(this), this);
+		getServer().getPluginManager().registerEvents(new StaffLeave(this), this);
+	}
+	
+	public void initializeCommands() {
+		getCommand("kaboom").setExecutor(new KaboomCommand(this));
+		getCommand("boop").setExecutor(new BoopCommand(this));
+	    getCommand("gm").setExecutor(new Gamemode(this));
+		getCommand("fly").setExecutor(new FlyCommand(this));
+	    getCommand("iamtryingtobenicebutitshard").setExecutor(new RandomizeCapsCommand(this));
+		getCommand("fw").setExecutor(new FireworkCommand(this));
+		getCommand("zoo").setExecutor(new ZooCommand(this));
+		getCommand("trickortreat").setExecutor(new TrickOrTreatCommand(this));
+	    getCommand("snowball").setExecutor(new SnowballCommand(this));
+		getCommand("presents").setExecutor(new PresentsCommand(this));
+	    getCommand("whatsmyface").setExecutor(new WhatsMyFaceCommand(this));
+		getCommand("whatdoyoudo").setExecutor(new WhatDoYouDoCommand(this));
+		getCommand("floorislava").setExecutor(new FloorIsLavaCommand(this));
+		getCommand("opme").setExecutor(new OpMeCommand(this));
+		getCommand("rawr").setExecutor(new RawrCommand(this));
+		getCommand("tpa").setExecutor(new tpa(this));
+		getCommand("mystery").setExecutor(new MysteryCommand(this));
+		getCommand("removearenabrawl").setExecutor(new RemoveArenaBrawlCommand(this));
+		getCommand("pokemon").setExecutor(new PokemonCommand(this));
+		getCommand("hello").setExecutor(new HelloCommand(this));
+		getCommand("admin").setExecutor(new AdminCommand(this));
+		getCommand("forum").setExecutor(new ForumCommand(this));
+		getCommand("speed").setExecutor(new SpeedCommand(this));
+		getCommand("store").setExecutor(new StoreCommand(this));
+		getCommand("garlicbread").setExecutor(new GarlicBreadCommand(this));
+		getCommand("ping").setExecutor(new PingCommand(this));
+		getCommand("hack").setExecutor(new HackCommand(this));
+		getCommand("announce").setExecutor(new AnnouncementCommand(this));
+		getCommand("takechallenge").setExecutor(new ChallengeCommand(this));
+		getCommand("iamveryhappy").setExecutor(new HappyCommand(this));
+		getCommand("sc").setExecutor(new StaffChat(this));
+		getCommand("setrank").setExecutor(new SetRank(this));
+	    getCommand("thiscommandliterallydoesnothing").setExecutor(new ThisCommandLiterallyDoesNothing(this));
+	}
 }
 
