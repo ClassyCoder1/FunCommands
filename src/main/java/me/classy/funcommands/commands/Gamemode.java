@@ -33,14 +33,12 @@ public class Gamemode implements CommandExecutor {
                         case "s":
                             player.setGameMode(GameMode.SURVIVAL);
                             player.sendMessage(ChatColor.GREEN + "Your gamemode has been changed to Survival.");
-							ActionBarAPI.sendActionBar(player, "§rYour current gamemode is §cSURVIVAL§r!");
                             break;
                         case "creative":
                         case "1":
                         case "c":
                             player.setGameMode(GameMode.CREATIVE);
                             player.sendMessage(ChatColor.GREEN + "Your gamemode has been changed to Creative.");
-                            ActionBarAPI.sendActionBar(player, "§rYour current gamemode is §cCREATIVE§r!");
 							break;
                         case "adventure":
                         case "2":
@@ -53,8 +51,7 @@ public class Gamemode implements CommandExecutor {
                         case "sp":
                             player.setGameMode(GameMode.SPECTATOR);
                             player.sendMessage(ChatColor.GREEN + "Your gamemode has been changed to Spectator.");
-							ActionBarAPI.sendActionBar(player, "§rYour current gamemode is §cSPECTATOR§r!");
-                            break;
+							break;
                     }
                 } else {
                     sender.sendMessage("§eUsage: §b/gm <0|1|2|3>");

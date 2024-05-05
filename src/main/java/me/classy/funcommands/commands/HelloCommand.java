@@ -17,7 +17,6 @@ public class HelloCommand implements CommandExecutor {
 	
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		command.equals("hello");
 		sender.sendMessage(ChatColor.GREEN + "Why hello there!");
 		return true;
     }

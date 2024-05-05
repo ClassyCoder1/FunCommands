@@ -3,7 +3,7 @@ author: ClassyCoder
 main: me.classy.funcommands.FunCommands
 version: 2.2
 api-version: 1.12.2
-depends: LuckPerms
+soft-depends: LuckPerms
 commands:
   kaboom:
     description: Kaboom a player
@@ -26,7 +26,6 @@ commands:
   removearenabrawl:
   pokemon:
   hello:
-    aliases: /hi
   admin:
   gm:
   forum:
@@ -39,8 +38,6 @@ commands:
   announce:
   takechallenge:
   iamveryhappy:
-  vanish:
-  unvanish:
   sc:
   setrank:
   thiscommandliterallydoesnothing:

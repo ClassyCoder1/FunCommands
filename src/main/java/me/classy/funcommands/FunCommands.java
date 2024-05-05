@@ -44,7 +44,6 @@ import me.classy.funcommands.rank.RankManager;
 import me.classy.funcommands.staff.StaffChat;
 import me.classy.funcommands.staff.StaffJoin;
 import me.classy.funcommands.staff.StaffLeave;
-import me.classy.funcommands.staffcommands.Vanish;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,7 +100,6 @@ public class FunCommands extends JavaPlugin {
     }
 	
 	public void initializeEvents() {
-		getServer().getPluginManager().registerEvents(new Vanish(this), this);
 		getServer().getPluginManager().registerEvents(new StaffJoin(this), this);
 		getServer().getPluginManager().registerEvents(new StaffLeave(this), this);
 	}
