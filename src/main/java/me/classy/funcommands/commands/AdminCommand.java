@@ -12,7 +12,7 @@ import java.util.Random;
 public class AdminCommand implements CommandExecutor {
 	
 	private FunCommands plugin;
-    private final String[] messages = {"Try Harder", "Is there anybody out there?", "You're doing great!"};
+    private final String[] messages = {"Try Harder", "Is there anybody out there?"};
 	
 	public AdminCommand(FunCommands plugin) {
 		this.plugin = plugin;

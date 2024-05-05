@@ -38,6 +38,7 @@ import me.classy.funcommands.commands.WhatDoYouDoCommand;
 import me.classy.funcommands.commands.WhatsMyFaceCommand;
 import me.classy.funcommands.commands.ZooCommand;
 import me.classy.funcommands.commands.SetRank;
+import me.classy.funcommands.commands.ThisCommandLiterallyDoesNothing;
 import me.classy.funcommands.rank.Rank;
 import me.classy.funcommands.rank.RankManager;
 import me.classy.funcommands.staff.StaffChat;
@@ -94,6 +95,8 @@ public class FunCommands extends JavaPlugin {
 		this.getCommand("iamveryhappy").setExecutor(new HappyCommand(this));
 		this.getCommand("sc").setExecutor(new StaffChat(this));
 		this.getCommand("setrank").setExecutor(new SetRank(this));
+		this.getCommand("hi").setExecutor(new HelloCommand(this));
+		this.getCommand("thiscommandliterallydoesnothing").setExecutor(new ThisCommandLiterallyDoesNothing(this));
 		
 		getLogger().info("Registered commands!");
 		
