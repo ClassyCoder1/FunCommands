@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import me.classy.funcommands.FunCommands;
 import me.classy.funcommands.utility.Utils;
 
 public class Rank implements RankManager {

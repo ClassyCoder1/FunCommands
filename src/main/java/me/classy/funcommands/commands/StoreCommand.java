@@ -29,6 +29,6 @@ public class StoreCommand implements CommandExecutor {
     }
 
     private void executeStoreCommand(Player player) {
-        player.sendMessage(ChatColor.YELLOW + "Visit our store at: " + ChatColor.AQUA + "https://store.hypixel.net" + ChatColor.YELLOW + "!");
+        player.sendMessage(ChatColor.YELLOW + "Visit our store at: " + ChatColor.AQUA + ((FunCommands)FunCommands.getPlugin(FunCommands.class)).getConfig().getString("store") + ChatColor.YELLOW + "!");
     }
 }

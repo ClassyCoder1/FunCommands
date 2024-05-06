@@ -29,6 +29,6 @@ public class DiscordCommand implements CommandExecutor {
     }
 
     private void executeDiscordCommand(Player player) {
-        player.sendMessage(ChatColor.YELLOW + "Join our Discord server at: " + ChatColor.AQUA + "https://discord.com/invite/wJSUvDP9bG");
+        player.sendMessage(ChatColor.YELLOW + "Join our Discord server at: " + ChatColor.AQUA + ((FunCommands)FunCommands.getPlugin(FunCommands.class)).getConfig().getString("discordserverlink") + ChatColor.YELLOW + "!");
     }
 }

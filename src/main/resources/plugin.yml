@@ -1,7 +1,7 @@
 name: FunCommands
 author: ClassyCoder
 main: me.classy.funcommands.FunCommands
-version: 2.2
+version: 2.3
 api-version: 1.12.2
 soft-depends: LuckPerms
 commands:
@@ -34,7 +34,6 @@ commands:
   garlicbread:
   ping:
   hack:
-  meow:
   announce:
   takechallenge:
   iamveryhappy:

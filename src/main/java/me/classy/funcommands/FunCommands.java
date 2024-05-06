@@ -52,6 +52,12 @@ public class FunCommands extends JavaPlugin {
 	
 	public void onEnable() {
 		
+		getLogger().info("Loading configuration...");
+		
+		this.loadConfig();
+		
+		getLogger().info("Loaded configuration!");
+		
 		getLogger().info("Registering events...");
 		
 		initializeEvents();
@@ -80,6 +86,11 @@ public class FunCommands extends JavaPlugin {
 		getLogger().info("§e-------------------------------------");
         getLogger().info("§bFunCommands plugin has been disabled!");
         getLogger().info("§e-------------------------------------");
+	}
+	
+	public void loadConfig() {
+		this.getConfig().options().copyDefaults(true);
+		this.saveConfig();
 	}
 	
 	public void initializeGameRules() {
