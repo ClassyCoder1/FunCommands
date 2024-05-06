@@ -16,48 +16,58 @@ public class KaboomCommand implements CommandExecutor {
     public KaboomCommand(FunCommands plugin) {
         this.plugin = plugin;
     }
-
-    @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("§cOnly players can use this command!");
-            return true;
-        }
-
-        Player player = (Player) sender;
-
-        if (!player.hasPermission("funcommands.kaboom")) {
-            player.sendMessage("§cYou don't have permission to use this command.");
-            return true;
-        }
-
-        if (args.length != 1) {
-            player.sendMessage("§eUsage: §b/kaboom <name>");
-            return true;
-        }
-
-        Player targetPlayer = Bukkit.getPlayer(args[0]);
-
-        if (targetPlayer == null || !targetPlayer.isOnline()) {
-            player.sendMessage("§cPlayer §r" + args[0] + "§c is not online!");
-            return true;
-        }
-
-        strikeLightning(targetPlayer);
-		spawnTnt(targetPlayer);
-        targetPlayer.sendMessage("§cKaboomed by §r" + player.getName());
-
-		String titleMessage = "§l§cKABOOM!";
-        targetPlayer.sendTitle(titleMessage, null);
-		
-        return true;
-    }
-
-    private void strikeLightning(Player target) {
-        target.getWorld().strikeLightningEffect(target.getLocation());
-    }
 	
-	private void spawnTnt(Player target) {
-		target.getWorld().createExplosion(target.getLocation(), 5f);
+	@Override
+	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+		if (!(sender.hasPermission("funcommands.kaboom"))) {
+			sender.sendMessage("§cYou have to be an ADMIN to do this.");
+			return true;
+		}
+		
+		if (args.length == 0) {
+			if (sender instanceof Player) {
+				kaboomPlayer((Player) sender);
+			} else {
+				sender.sendMessage("§eUsage: §b/kaboom <all|playerName>");
+			}
+			return true;
+		}
+		
+		if (args[0].equalsIgnoreCase("all")) {
+			kaboomAllPlayer(sender);
+			return true;
+		}
+		
+		Player targetPlayer = Bukkit.getPlayer(args[0]);
+		
+		if (targetPlayer == null || !targetPlayer.isOnline()) {
+			sender.sendMessage("§cPlayer §b" + args[0] + " §cis not online!");
+			return true;
+		}
+		
+		kaboomPlayer(targetPlayer);
+		return true;
+	}
+	
+	private void kaboomAllPlayer(CommandSender sender) {
+		for (Player player : Bukkit.getOnlinePlayers()) {
+			if (player != sender) {
+				kaboomPlayer(player);
+			}
+		}
+		sender.sendMessage("§cKaboomed all player!");
+	}
+	
+	private void kaboomPlayer(Player target) {
+		target.getWorld().strikeLightningEffect(target.getLocation());
+		target.setVelocity(target.getVelocity().add(target.getLocation().getDirection().multiply(2)));
+		target.sendMessage("You wad kaboomed.");
+		
+		sendKaboomTitle(target);
+	}
+	
+	private void sendKaboomTitle(Player player) {
+		String titleMessage = "§cKABOOM!";
+		player.sendTitle(titleMessage, null);
 	}
 }
