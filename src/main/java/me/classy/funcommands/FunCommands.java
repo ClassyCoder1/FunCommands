@@ -39,11 +39,6 @@ import me.classy.funcommands.commands.WhatsMyFaceCommand;
 import me.classy.funcommands.commands.ZooCommand;
 import me.classy.funcommands.commands.SetRank;
 import me.classy.funcommands.commands.ThisCommandLiterallyDoesNothing;
-import me.classy.funcommands.rank.Rank;
-import me.classy.funcommands.rank.RankManager;
-import me.classy.funcommands.staff.StaffChat;
-import me.classy.funcommands.staff.StaffJoin;
-import me.classy.funcommands.staff.StaffLeave;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,29 +47,25 @@ public class FunCommands extends JavaPlugin {
 	
 	public void onEnable() {
 		
-		getLogger().info("Loading configuration...");
+		getLogger().info("§eLoading configuration...");
 		
 		this.loadConfig();
 		
-		getLogger().info("Loaded configuration!");
+		getLogger().info("§aLoaded configuration!");
 		
-		getLogger().info("Registering events...");
+        getLogger().info("§cNo events found.");
 		
-		initializeEvents();
-		
-		getLogger().info("Registered events!");
-		
-		getLogger().info("Registering commands...");
+		getLogger().info("§eRegistering commands...");
 		
 		initializeCommands();
 		
-		getLogger().info("Registered commands!");
+		getLogger().info("§aRegistered commands!");
 		
-		getLogger().info("Initializing Gamerules...");
+		getLogger().info("§eInitializing Gamerules...");
 		
 		initializeGameRules();
 		
-		getLogger().info("Initizlized Gamerules!");
+		getLogger().info("§aInitizlized Gamerules!");
 		
 		getLogger().info("§e------------------------------------");
         getLogger().info("§bFunCommands plugin has been enabled!");
@@ -110,11 +101,6 @@ public class FunCommands extends JavaPlugin {
         }
     }
 	
-	public void initializeEvents() {
-		getServer().getPluginManager().registerEvents(new StaffJoin(this), this);
-		getServer().getPluginManager().registerEvents(new StaffLeave(this), this);
-	}
-	
 	public void initializeCommands() {
 		getCommand("kaboom").setExecutor(new KaboomCommand(this));
 		getCommand("boop").setExecutor(new BoopCommand(this));
@@ -146,7 +132,6 @@ public class FunCommands extends JavaPlugin {
 		getCommand("announce").setExecutor(new AnnouncementCommand(this));
 		getCommand("takechallenge").setExecutor(new ChallengeCommand(this));
 		getCommand("iamveryhappy").setExecutor(new HappyCommand(this));
-		getCommand("sc").setExecutor(new StaffChat(this));
 		getCommand("setrank").setExecutor(new SetRank(this));
 	    getCommand("thiscommandliterallydoesnothing").setExecutor(new ThisCommandLiterallyDoesNothing(this));
 		getCommand("discord").setExecutor(new DiscordCommand(this));

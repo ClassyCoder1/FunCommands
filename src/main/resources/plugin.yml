@@ -1,14 +1,11 @@
 name: FunCommands
 author: ClassyCoder
 main: me.classy.funcommands.FunCommands
-version: 2.3
+version: 3.0
 api-version: 1.12.2
-soft-depends: LuckPerms
 commands:
   kaboom:
-    description: Kaboom a player
   boop:
-    description: Boop a player
   fly:
   iamtryingtobenicebutitshard:
   fw:
@@ -37,7 +34,5 @@ commands:
   announce:
   takechallenge:
   iamveryhappy:
-  sc:
-  setrank:
   thiscommandliterallydoesnothing:
   discord:
