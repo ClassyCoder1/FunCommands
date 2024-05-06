@@ -37,7 +37,6 @@ import me.classy.funcommands.commands.TrickOrTreatCommand;
 import me.classy.funcommands.commands.WhatDoYouDoCommand;
 import me.classy.funcommands.commands.WhatsMyFaceCommand;
 import me.classy.funcommands.commands.ZooCommand;
-import me.classy.funcommands.commands.SetRank;
 import me.classy.funcommands.commands.ThisCommandLiterallyDoesNothing;
 
 import java.util.ArrayList;
@@ -132,7 +131,6 @@ public class FunCommands extends JavaPlugin {
 		getCommand("announce").setExecutor(new AnnouncementCommand(this));
 		getCommand("takechallenge").setExecutor(new ChallengeCommand(this));
 		getCommand("iamveryhappy").setExecutor(new HappyCommand(this));
-		getCommand("setrank").setExecutor(new SetRank(this));
 	    getCommand("thiscommandliterallydoesnothing").setExecutor(new ThisCommandLiterallyDoesNothing(this));
 		getCommand("discord").setExecutor(new DiscordCommand(this));
 	}
