@@ -149,6 +149,7 @@ public class FunCommands extends JavaPlugin {
 		getCommand("sc").setExecutor(new StaffChat(this));
 		getCommand("setrank").setExecutor(new SetRank(this));
 	    getCommand("thiscommandliterallydoesnothing").setExecutor(new ThisCommandLiterallyDoesNothing(this));
+		getCommand("discord").setExecutor(new DiscordCommand(this));
 	}
 }
 
