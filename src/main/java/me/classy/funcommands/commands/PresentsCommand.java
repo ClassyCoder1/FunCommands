@@ -28,6 +28,6 @@ public class PresentsCommand implements CommandExecutor {
 	}
 
     private boolean isChristmas() {
-        return false;
+        return plugin.getConfig().getBoolean("christmas-time");
     }
 }

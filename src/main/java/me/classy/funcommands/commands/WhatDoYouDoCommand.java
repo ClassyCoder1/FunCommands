@@ -17,7 +17,7 @@ public class WhatDoYouDoCommand implements CommandExecutor {
 	
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        sender.sendMessage(ChatColor.DARK_GRAY + "Nothing.");
+        sender.sendMessage("§7Nothing.");
         return true;
     }
 }

@@ -30,10 +30,10 @@ public class tpa implements CommandExecutor {
                     sender.sendMessage("§eUsage: §b/tpa <name>");
                 }
             } else {
-                sender.sendMessage(ChatColor.RED + "You don't have permission to use this command!");
+                sender.sendMessage("§cYou don't have permission to use this command!");
             }
         } else {
-            sender.sendMessage(ChatColor.RED + "You must be a player to use this command!");
+            sender.sendMessage("§cOnly players can use this command.");
         }
         return true;
     }

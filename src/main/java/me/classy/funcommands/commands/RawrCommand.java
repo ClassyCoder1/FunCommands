@@ -17,7 +17,7 @@ public class RawrCommand implements CommandExecutor {
 	
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        sender.sendMessage(ChatColor.DARK_GRAY + "Wow, you scared me!");
+        sender.sendMessage("§7Wow, you scared me!");
         return true;
     }
 }

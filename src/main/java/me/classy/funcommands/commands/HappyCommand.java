@@ -25,7 +25,7 @@ public class HappyCommand implements CommandExecutor {
 			return true;
 		}
 		
-		Bukkit.broadcastMessage("" + player.getName() + " §eis happy!");
+		Bukkit.broadcastMessage("§a" + player.getName() + " §eis happy!");
 		return true;
 	} 
 }

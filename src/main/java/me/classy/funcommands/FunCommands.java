@@ -38,6 +38,8 @@ import me.classy.funcommands.commands.WhatDoYouDoCommand;
 import me.classy.funcommands.commands.WhatsMyFaceCommand;
 import me.classy.funcommands.commands.ZooCommand;
 import me.classy.funcommands.commands.ThisCommandLiterallyDoesNothing;
+import me.classy.funcommands.commands.FunCommand;
+import me.classy.funcommands.commands.ShrugCommand;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +53,6 @@ public class FunCommands extends JavaPlugin {
 		this.loadConfig();
 		
 		getLogger().info("§aLoaded configuration!");
-		
-        getLogger().info("§cNo events found.");
 		
 		getLogger().info("§eRegistering commands...");
 		
@@ -68,6 +68,7 @@ public class FunCommands extends JavaPlugin {
 		
 		getLogger().info("§e------------------------------------");
         getLogger().info("§bFunCommands plugin has been enabled!");
+		getLogger().info("§bAuthor: Classy");
         getLogger().info("§e------------------------------------");
 	}
 
@@ -75,6 +76,7 @@ public class FunCommands extends JavaPlugin {
 	public void onDisable() {
 		getLogger().info("§e-------------------------------------");
         getLogger().info("§bFunCommands plugin has been disabled!");
+		getLogger().info("§bAuthor: Classy");
         getLogger().info("§e-------------------------------------");
 	}
 	
@@ -106,7 +108,7 @@ public class FunCommands extends JavaPlugin {
 	    getCommand("gm").setExecutor(new Gamemode(this));
 		getCommand("fly").setExecutor(new FlyCommand(this));
 	    getCommand("iamtryingtobenicebutitshard").setExecutor(new RandomizeCapsCommand(this));
-		getCommand("fw").setExecutor(new FireworkCommand(this));
+		getCommand("fireworks").setExecutor(new FireworkCommand(this));
 		getCommand("zoo").setExecutor(new ZooCommand(this));
 		getCommand("trickortreat").setExecutor(new TrickOrTreatCommand(this));
 	    getCommand("snowball").setExecutor(new SnowballCommand(this));
@@ -133,6 +135,8 @@ public class FunCommands extends JavaPlugin {
 		getCommand("iamveryhappy").setExecutor(new HappyCommand(this));
 	    getCommand("thiscommandliterallydoesnothing").setExecutor(new ThisCommandLiterallyDoesNothing(this));
 		getCommand("discord").setExecutor(new DiscordCommand(this));
+		getCommand("shrug").setExecutor(new ShrugCommand(this));
+		getCommand("funcommands").setExecutor(new FunCommand(this));
 	}
 }
 

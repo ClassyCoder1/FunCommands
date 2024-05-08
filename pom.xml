@@ -2,9 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>me.classy.funcommands</groupId>
+  <groupId>me.classy</groupId>
   <artifactId>FunCommands</artifactId>
-  <version>3.2</version>
+  <version>4.0</version>
   
   <name>FunCommands</name>
   

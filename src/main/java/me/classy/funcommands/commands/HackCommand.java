@@ -17,7 +17,7 @@ public class HackCommand implements CommandExecutor {
 	
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        sender.sendMessage(ChatColor.RED + "Don't use Hacks!!");
+        sender.sendMessage(ChatColor.RED + "Don't use Hacks!");
         return true;
     }
 }

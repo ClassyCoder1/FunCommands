@@ -17,7 +17,17 @@ public class TrickOrTreatCommand implements CommandExecutor {
 	
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        sender.sendMessage(ChatColor.RED + "It's not Halloween yet!");
-        return true;
-    }
+        if (!isHalloween()) {
+			sender.sendMessage("§cIt's not Halloween yet!");
+			return true;
+		}
+		else {
+		sender.sendMessage("Happy Halloween!");
+		return true;
+		}
+	}
+
+	private boolean isHalloween() {
+		return plugin.getConfig().getBoolean("halloween-time");
+	}
 }

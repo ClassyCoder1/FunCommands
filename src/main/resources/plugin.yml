@@ -1,38 +1,77 @@
 name: FunCommands
 author: ClassyCoder
 main: me.classy.funcommands.FunCommands
-version: 3.2
+version: 4.0
 api-version: 1.12.2
 commands:
   kaboom:
+    usage: "/kaboom <player|all>"
   boop:
+    usage: "/boop <player>"
   fly:
+    usage: "/fly"
   iamtryingtobenicebutitshard:
-  fw:
+    usage: "/iamtryingtobenicebutitshard"
+  fireworks:
+    usage: "/fireworks"
+    aliases: fw
   zoo:
+    usage: "/zoo"
   trickortreat:
+    usage: "/trickortreat"
   snowball:
+    usage: "/snowball"
   presents:
+    usage: "/presents"
   whatsmyface:
+    usage: "/whatsmyface"
   whatdoyoudo:
+    usage: "/whatdoyoudo"
   floorislava:
+    usage: "/floorislava"
   opme:
+    usage: "/opme"
   rawr:
+    usage: "/rawr"
   tpa:
+    usage: "/tpa <player>"
   mystery:
+    usage: "/mystery"
   removearenabrawl:
+    usage: "/removearenabrawl"
   pokemon:
+    usage: "/pokemon"
   hello:
+    usage: "/hello or /hi"
+    aliases: hi
   admin:
+    usage: "/admin"
   gm:
+    usage: "/gm <s|c|a|sp>"
   forum:
+    usage: "/forum"
   speed:
+    usage: "/speed <fly|walk> <amount> <player>"
   store:
+    usage: "/store"
   garlicbread:
+    usage: "/garlicbread"
   ping:
+    usage: "/ping"
   hack:
+    usage: "/hack"
   announce:
+    usage: "/announce <message>"
   takechallenge:
+    usage: "/takechallenge"
   iamveryhappy:
+    usage: "/iamveryhappy"
   thiscommandliterallydoesnothing:
+    usage: "/thiscommandliterallydoesnothing"
   discord:
+    usage: "/discord"
+  funcommands:
+    usage: "/funcommands or /fun"
+    aliases: fun
+  shrug:
+    usage: "/shrug"
