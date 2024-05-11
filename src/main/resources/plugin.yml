@@ -1,7 +1,7 @@
 name: FunCommands
 author: ClassyCoder
 main: me.classy.funcommands.FunCommands
-version: 4.0
+version: 4.1
 api-version: 1.12.2
 commands:
   kaboom:
@@ -13,7 +13,7 @@ commands:
   iamtryingtobenicebutitshard:
     usage: "/iamtryingtobenicebutitshard"
   fireworks:
-    usage: "/fireworks"
+    usage: "/fireworks or /fw"
     aliases: fw
   zoo:
     usage: "/zoo"
@@ -71,7 +71,6 @@ commands:
   discord:
     usage: "/discord"
   funcommands:
-    usage: "/funcommands or /fun"
-    aliases: fun
+    usage: "/funcommands <pageNumber>"
   shrug:
     usage: "/shrug"

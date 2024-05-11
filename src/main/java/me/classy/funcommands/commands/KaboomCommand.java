@@ -6,6 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.util.Vector;
 
 import me.classy.funcommands.FunCommands;
 
@@ -60,8 +61,8 @@ public class KaboomCommand implements CommandExecutor {
 	
 	private void kaboomPlayer(Player target) {
 		target.getWorld().strikeLightningEffect(target.getLocation());
-		target.setVelocity(target.getVelocity().add(target.getLocation().getDirection().multiply(2)));
-		target.sendMessage("You wad kaboomed.");
+		target.setVelocity(new Vector(0, 2, 0));
+		target.sendMessage("§aYou was kaboomed.");
 		
 		sendKaboomTitle(target);
 	}

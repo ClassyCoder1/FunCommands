@@ -8,13 +8,14 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 import me.classy.funcommands.FunCommands;
+import me.classy.funcommands.utility.Utils;
 
 import java.util.Random;
 
 public class ChallengeCommand implements CommandExecutor {
 
     private final FunCommands plugin;
-	private final String[] message = {FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-1"), FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-2"), FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-3"), FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-4"), FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-5"), FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-6"), FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-7"), FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-8"), FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-9"), FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-10")};
+	private final String[] message = {Utils.colorize(FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-1")), Utils.colorize(FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-2")), Utils.colorize(FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-3")), Utils.colorize(FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-4")), Utils.colorize(FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-5")), Utils.colorize(FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-6")), Utils.colorize(FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-7")), Utils.colorize(FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-8")), Utils.colorize(FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-9")), Utils.colorize(FunCommands.getPlugin(FunCommands.class).getConfig().getString("challenge-10"))};
 
     public ChallengeCommand(FunCommands plugin) {
         this.plugin = plugin;

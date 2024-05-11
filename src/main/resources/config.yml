@@ -1,21 +1,30 @@
-# Links
+# Links 
 
 forums: https://hypixel.net
 store: https://store.hypixel.net
 discordserverlink: https://discord.gg/hypixel
 
-# Challenges
+# Challenges (Colors supported, use &<colorCode>)
 
-challenge-1: Your first challenge
-challenge-2: Your second challenge
-challenge-3: Your third challenge
-challenge-4: Your fourth challenge
-challenge-5: Your fifth challenge
-challenge-6: Your sixth challenge
-challenge-7: Your seventh challenge
-challenge-8: Your eighth challenge
-challenge-9: Your ninth challenge
-challenge-10: Your tenth challenge
+challenge-1: "Your first challenge"
+challenge-2: "Your second challenge"
+challenge-3: "Your third challenge"
+challenge-4: "Your fourth challenge"
+challenge-5: "Your fifth challenge"
+challenge-6: "Your sixth challenge"
+challenge-7: "Your seventh challenge"
+challenge-8: "Your eighth challenge"
+challenge-9: "Your ninth challenge"
+challenge-10: "Your tenth challenge"
+
+# Seasons (Use only true or false)
 
 christmas-time: false
 halloween-time: false
+
+# ActionBar Messages (Colors supported, use &<colorCode>)
+
+survival-actionbar-messages: "&aYour current gamemode is &cSURVIVAL&a."
+creative-actionbar-messages: "&aYour current gamemode is &cCREATIVE&a."
+adventure-actionbar-messages: "&aYour current gamemode is &cADVENTURE&a."
+spectator-actionbar-messages: "&aYour current gamemode is &cSPECTATOR&a."

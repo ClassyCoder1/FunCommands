@@ -9,8 +9,6 @@ import org.bukkit.entity.Player;
 
 import me.classy.funcommands.FunCommands;
 
-import com.connorlinfoot.actionbarapi.ActionBarAPI;
-
 public class Gamemode implements CommandExecutor {
 	
 	private FunCommands plugin;
@@ -23,7 +21,7 @@ public class Gamemode implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            if (player.hasPermission("pinkpixel.gamemode")) {
+            if (player.hasPermission("funcommands.gamemode")) {
                 if (args.length == 1) {
                     String mode = args[0].toLowerCase();
 
