@@ -1,5 +1,11 @@
 package me.classy.funcommands.commands;
 
+import net.md_5.bungee.api.chat.ClickEvent;
+import net.md_5.bungee.api.chat.ComponentBuilder;
+import net.md_5.bungee.api.chat.HoverEvent;
+import net.md_5.bungee.api.chat.TextComponent;
+import net.md_5.bungee.api.ChatColor;
+
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.command.Command;
@@ -31,6 +37,24 @@ public class FunCommand implements CommandExecutor {
 		}
 		
 		if (args[0].equals("1")) {
+			TextComponent lastPage = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a[LAST PAGE]"));
+			ClickEvent clickLastPage = new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/funcommands 5");
+			ComponentBuilder lastComponentPage = new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', "&aGo to last page."));
+			HoverEvent hoverLastPage = new HoverEvent(HoverEvent.Action.SHOW_TEXT, lastComponentPage.create());
+
+			lastPage.setClickEvent(clickLastPage);
+			lastPage.setHoverEvent(hoverLastPage);
+			player.spigot().sendMessage(lastPage);
+			
+			TextComponent nextPage = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a[NEXT PAGE]"));
+			ClickEvent clickNextPage = new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/funcommands 2");
+			ComponentBuilder nextComponentPage = new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', "&aGo to next page."));
+			HoverEvent hoverNextPage = new HoverEvent(HoverEvent.Action.SHOW_TEXT, nextComponentPage.create());
+
+			nextPage.setClickEvent(clickNextPage);
+			nextPage.setHoverEvent(hoverNextPage);
+			player.spigot().sendMessage(nextPage);
+			
 			player.sendMessage("§e---------------------------------------------------------------------------------------------");
 			player.sendMessage("§aFun Commands, Page 1:");
 			player.sendMessage("§b/boop <player>: §eSends the player a '§b§lBoop!'§e message.");
@@ -40,11 +64,31 @@ public class FunCommand implements CommandExecutor {
 			player.sendMessage("§b/trickortreat: §eA halloween command.");
 			player.sendMessage("§b/snowball: §eLaunches a snowball.");
 			player.sendMessage("§b/presents: §eChristmas command. If run outside of season, it responds with '§cHey it's not the time for presents anymore (or yet)!§e'");
-			player.sendMessage("§e---------------------------------------------------------------------------------------------");
+			player.sendMessage("§e----------------------------------------------------------------------------------------------");
+			player.sendMessage("§e------------ " + lastPage.toPlainText() + " §e------------ " + nextPage.toPlainText() + " §e------------");
+			player.sendMessage("§e----------------------------------------------------------------------------------------------");
 			return true;
 		}
 		
 		if (args[0].equals("2")) {
+			TextComponent prevPage = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a[PREVIOUS PAGE]"));
+			ClickEvent clickPrevPage = new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/funcommands 1");
+			ComponentBuilder prevComponentPage = new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', "&aGo to last page."));
+			HoverEvent hoverPrevPage = new HoverEvent(HoverEvent.Action.SHOW_TEXT, prevComponentPage.create());
+
+			prevPage.setClickEvent(clickPrevPage);
+			prevPage.setHoverEvent(hoverPrevPage);
+			player.spigot().sendMessage(prevPage);
+
+			TextComponent nextPage = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a[NEXT PAGE]"));
+			ClickEvent clickNextPage = new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/funcommands 3");
+			ComponentBuilder nextComponentPage = new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', "&aGo to next page."));
+			HoverEvent hoverNextPage = new HoverEvent(HoverEvent.Action.SHOW_TEXT, nextComponentPage.create());
+			
+			nextPage.setClickEvent(clickNextPage);
+			nextPage.setHoverEvent(hoverNextPage);
+			player.spigot().sendMessage(nextPage);
+			
 			player.sendMessage("§e---------------------------------------------------------------------------------------------");
 			player.sendMessage("§aFun Commands, Page 2:");
 			player.sendMessage("§b/whatsmyface: §eResponds with '§cNot today! ... also not tomorrow.§e'");
@@ -55,10 +99,30 @@ public class FunCommand implements CommandExecutor {
 			player.sendMessage("§b/rawr: §eResponds with '§7Wow, you scared me there!§e'");
 			player.sendMessage("§b/removearenabrawl: §eResponds with '§fok§e'.");
 			player.sendMessage("§e---------------------------------------------------------------------------------------------");
+			player.sendMessage("§e------------ " + prevPage.toPlainText() + " §e------------ " + nextPage.toPlainText() + " §e------------");
+			player.sendMessage("§e---------------------------------------------------------------------------------------------");
 			return true;
 		}
 		
 		if (args[0].equals("3")) {
+			TextComponent prevPage = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a[PREVIOUS PAGE]"));
+			ClickEvent clickPrevPage = new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/funcommands 2");
+			ComponentBuilder prevComponentPage = new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', "&aGo to last page."));
+			HoverEvent hoverPrevPage = new HoverEvent(HoverEvent.Action.SHOW_TEXT, prevComponentPage.create());
+
+			prevPage.setClickEvent(clickPrevPage);
+			prevPage.setHoverEvent(hoverPrevPage);
+			player.spigot().sendMessage(prevPage);
+
+			TextComponent nextPage = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a[NEXT PAGE]"));
+			ClickEvent clickNextPage = new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/funcommands 4");
+			ComponentBuilder nextComponentPage = new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', "&aGo to next page."));
+			HoverEvent hoverNextPage = new HoverEvent(HoverEvent.Action.SHOW_TEXT, nextComponentPage.create());
+
+			nextPage.setClickEvent(clickNextPage);
+			nextPage.setHoverEvent(hoverNextPage);
+			player.spigot().sendMessage(nextPage);
+			
 			player.sendMessage("§e---------------------------------------------------------------------------------------------");
 			player.sendMessage("§aFun Commands, Page 3:");
 			player.sendMessage("§b/pokemon: §eResponds with '§3Gotta catch 'em all!§e");
@@ -69,10 +133,30 @@ public class FunCommand implements CommandExecutor {
 			player.sendMessage("§b/takechallenge: §eGives you a random challenge.");
 			player.sendMessage("§b/dupe: §eResponds with '§cGo and watch pogo!§e'");
 			player.sendMessage("§e---------------------------------------------------------------------------------------------");
+			player.sendMessage("§e------------ " + prevPage.toPlainText() + " §e------------ " + nextPage.toPlainText() + " §e------------");
+			player.sendMessage("§e---------------------------------------------------------------------------------------------");
 			return true;
 		}
 		
 		if (args[0].equals("4")) {
+			TextComponent prevPage = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a[PREVIOUS PAGE]"));
+			ClickEvent clickPrevPage = new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/funcommands 3");
+			ComponentBuilder prevComponentPage = new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', "&aGo to last page."));
+			HoverEvent hoverPrevPage = new HoverEvent(HoverEvent.Action.SHOW_TEXT, prevComponentPage.create());
+
+			prevPage.setClickEvent(clickPrevPage);
+			prevPage.setHoverEvent(hoverPrevPage);
+			player.spigot().sendMessage(prevPage);
+
+			TextComponent nextPage = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a[NEXT PAGE]"));
+			ClickEvent clickNextPage = new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/funcommands 5");
+			ComponentBuilder nextComponentPage = new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', "&aGo to next page."));
+			HoverEvent hoverNextPage = new HoverEvent(HoverEvent.Action.SHOW_TEXT, nextComponentPage.create());
+
+			nextPage.setClickEvent(clickNextPage);
+			nextPage.setHoverEvent(hoverNextPage);
+			player.spigot().sendMessage(nextPage);
+			
 			player.sendMessage("§e---------------------------------------------------------------------------------------------");
 			player.sendMessage("§aFun Commands, Page 4:");
 			player.sendMessage("§b/hack: §eResponds with '§cDon't use hacks!§e'");
@@ -83,10 +167,30 @@ public class FunCommand implements CommandExecutor {
 			player.sendMessage("§b/ping: §eReturns with your ping.");
 			player.sendMessage("§b/announce <messages>: §eUsed to make an announcement.");
 			player.sendMessage("§e---------------------------------------------------------------------------------------------");
+			player.sendMessage("§e------------ " + prevPage.toPlainText() + " §e------------ " + nextPage.toPlainText() + " §e------------");
+			player.sendMessage("§e---------------------------------------------------------------------------------------------");
 			return true;
 		}
 		
 		if (args[0].equals("5")) {
+			TextComponent prevPage = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a[PREVIOUS PAGE]"));
+			ClickEvent clickPrevPage = new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/funcommands 4");
+			ComponentBuilder prevComponentPage = new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', "&aGo to last page."));
+			HoverEvent hoverPrevPage = new HoverEvent(HoverEvent.Action.SHOW_TEXT, prevComponentPage.create());
+
+			prevPage.setClickEvent(clickPrevPage);
+			prevPage.setHoverEvent(hoverPrevPage);
+			player.spigot().sendMessage(prevPage);
+
+			TextComponent firstPage = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a[FIRST PAGE]"));
+			ClickEvent clickFirstPage = new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/funcommands 1");
+			ComponentBuilder firstComponentPage = new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', "&aGo to first page."));
+			HoverEvent hoverFirstPage = new HoverEvent(HoverEvent.Action.SHOW_TEXT, firstComponentPage.create());
+
+			firstPage.setClickEvent(clickFirstPage);
+			firstPage.setHoverEvent(hoverFirstPage);
+			player.spigot().sendMessage(firstPage);
+			
 			player.sendMessage("§e---------------------------------------------------------------------------------------------");
 			player.sendMessage("§aFun Commands, Page 5:");
 			player.sendMessage("§b/fly: §eUsed to enable or disable flight mode.");
@@ -96,10 +200,10 @@ public class FunCommand implements CommandExecutor {
 			player.sendMessage("§b/fw: §eLaunches a firework where you are standing, must be §aVIP §eor higher to use.");
 			player.sendMessage("§b/shrug: §eSends the §6MVP§c++ §eshrug emote.");
 			player.sendMessage("§e---------------------------------------------------------------------------------------------");
+			player.sendMessage("§e------------ " + prevPage.toPlainText() + " §e------------ " + firstPage.toPlainText() + " §e------------");
+			player.sendMessage("§e---------------------------------------------------------------------------------------------");
 			return true;
 		}
-		
-		
 		return true;
 	}
 }

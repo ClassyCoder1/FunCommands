@@ -5,6 +5,7 @@
   <groupId>me.classy</groupId>
   <artifactId>FunCommands</artifactId>
   <version>4.1</version>
+  <packaging>jar</packaging>
   
   <name>FunCommands</name>
   
@@ -15,6 +16,10 @@
   </properties>
 
   <repositories>
+	  <repository>
+		  <id>songoda</id>
+		  <url>https://repo.songoda.com/repository/public</url>
+	  </repository>
       <repository>
 		  <id>spigot-repo</id>
           <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
@@ -26,12 +31,18 @@
    </repositories>
 
    <dependencies>
-      <dependency>
+       <dependency>
           <groupId>org.spigotmc</groupId>
           <artifactId>spigot-api</artifactId>
           <version>1.12.2-R0.1-SNAPSHOT</version>
           <scope>provided</scope>
-      </dependency>
+       </dependency>
+	   <dependency>
+		   <groupId>org.spigotmc</groupId>
+		   <artifactId>spigot</artifactId>
+		   <version>1.12.2</version>
+		   <scope>provided</scope>
+	   </dependency>
 	   <dependency>
 		   <groupId>org.apache.commons</groupId>
 		   <artifactId>commons-lang3</artifactId>
@@ -42,11 +53,6 @@
 		   <artifactId>annotations</artifactId>
 		   <version>13.0</version>
 		   <scope>compile</scope>
-	   </dependency>
-	   <dependency>
-		   <groupId>com.github.ConnorLinfoot</groupId>
-		   <artifactId>ActionBarAPI</artifactId>
-		   <version>5b2d642d3d</version>
 	   </dependency>
    </dependencies>
 
